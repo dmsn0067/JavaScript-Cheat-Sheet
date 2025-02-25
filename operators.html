@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Anthony Maximus - The JavaScript Cheat Sheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The JavaScript Cheat Sheet explanation of Javascript for beginers">
+<meta name="author" content="Anthony Maximus">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <a href="https://anthonymaximus.com">
+                <div class="logocontainer">
+                    <h1>Anthony Maximus</h1>
+                    <h2>The Javascript Cheat Sheet</h2>
+                </div>
+            </a>
+            
+            <nav>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="objects.html">Objects</a></li>
+                    <li><a href="methods.html">Methods</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                </ol>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <section>
+
+                <h1>Operators</h1>
+
+                <h2>For quik maths</h2>
+
+                <label for="magnify">Magnification On/Off</label>
+                <input type="checkbox" id="magnify" checked>
+
+                <br>
+                <br>
+
+                <table data-start="122" data-end="3448">
+                    <thead data-start="122" data-end="195">
+                        <tr data-start="122" data-end="195">
+                            <th data-start="122" data-end="133">Operator</th>
+                            <th data-start="133" data-end="165">Name</th>
+                            <th data-start="165" data-end="195">Description / What It Does</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="269" data-end="3448">
+                        <tr data-start="269" data-end="357">
+                            <td><code data-start="271" data-end="274">+</code></td>
+                            <td>Addition</td>
+                            <td>Adds two numbers or concatenates strings.</td>
+                        </tr>
+                        <tr data-start="358" data-end="447">
+                            <td><code data-start="360" data-end="363">-</code></td>
+                            <td>Subtraction</td>
+                            <td>Subtracts the right operand from the left.</td>
+                        </tr>
+                        <tr data-start="448" data-end="518">
+                            <td><code data-start="450" data-end="453">*</code></td>
+                            <td>Multiplication</td>
+                            <td>Multiplies two numbers.</td>
+                        </tr>
+                        <tr data-start="519" data-end="604">
+                            <td><code data-start="521" data-end="524">/</code></td>
+                            <td>Division</td>
+                            <td>Divides the left operand by the right.</td>
+                        </tr>
+                        <tr data-start="605" data-end="688">
+                            <td><code data-start="607" data-end="610">%</code></td>
+                            <td>Modulus (Remainder)</td>
+                            <td>Returns the remainder of a division.</td>
+                        </tr>
+                        <tr data-start="689" data-end="794">
+                            <td><code data-start="691" data-end="695">**</code></td>
+                            <td>Exponentiation</td>
+                            <td>Raises the left operand to the power of the right operand.</td>
+                        </tr>
+                        <tr data-start="795" data-end="868">
+                            <td><code data-start="797" data-end="801">++</code></td>
+                            <td>Increment</td>
+                            <td>Increases a variable by 1.</td>
+                        </tr>
+                        <tr data-start="869" data-end="942">
+                            <td><code data-start="871" data-end="875">--</code></td>
+                            <td>Decrement</td>
+                            <td>Decreases a variable by 1.</td>
+                        </tr>
+                        <tr data-start="943" data-end="1020">
+                            <td><code data-start="945" data-end="948">=</code></td>
+                            <td>Assignment</td>
+                            <td>Assigns a value to a variable.</td>
+                        </tr>
+                        <tr data-start="1021" data-end="1119">
+                            <td><code data-start="1023" data-end="1027">+=</code></td>
+                            <td>Addition Assignment</td>
+                            <td>Adds and assigns a value (<code data-start="1092" data-end="1100">x += 5</code> is <code data-start="1104" data-end="1115">x = x + 5</code>).</td>
+                        </tr>
+                        <tr data-start="1120" data-end="1215">
+                            <td><code data-start="1122" data-end="1126">-=</code></td>
+                            <td>Subtraction Assignment</td>
+                            <td>Subtracts and assigns (<code data-start="1188" data-end="1196">x -= 5</code> is <code data-start="1200" data-end="1211">x = x - 5</code>).</td>
+                        </tr>
+                        <tr data-start="1216" data-end="1312">
+                            <td><code data-start="1218" data-end="1222">*=</code></td>
+                            <td>Multiplication Assignment</td>
+                            <td>Multiplies and assigns (<code data-start="1285" data-end="1293">x *= 5</code> is <code data-start="1297" data-end="1308">x = x * 5</code>).</td>
+                        </tr>
+                        <tr data-start="1313" data-end="1406">
+                            <td><code data-start="1315" data-end="1319">/=</code></td>
+                            <td>Division Assignment</td>
+                            <td>Divides and assigns (<code data-start="1379" data-end="1387">x /= 5</code> is <code data-start="1391" data-end="1402">x = x / 5</code>).</td>
+                        </tr>
+                        <tr data-start="1407" data-end="1508">
+                            <td><code data-start="1409" data-end="1413">%=</code></td>
+                            <td>Modulus Assignment</td>
+                            <td>Finds remainder and assigns (<code data-start="1481" data-end="1489">x %= 5</code> is <code data-start="1493" data-end="1504">x = x % 5</code>).</td>
+                        </tr>
+                        <tr data-start="1509" data-end="1609">
+                            <td><code data-start="1511" data-end="1516">**=</code></td>
+                            <td>Exponentiation Assignment</td>
+                            <td>Raises power and assigns (<code data-start="1580" data-end="1589">x **= 2</code> is <code data-start="1593" data-end="1605">x = x ** 2</code>).</td>
+                        </tr>
+                        <tr data-start="1610" data-end="1712">
+                            <td><code data-start="1612" data-end="1616">==</code></td>
+                            <td>Loose Equality</td>
+                            <td>Checks if values are equal (converts types if needed).</td>
+                        </tr>
+                        <tr data-start="1713" data-end="1802">
+                            <td><code data-start="1715" data-end="1720">===</code></td>
+                            <td>Strict Equality</td>
+                            <td>Checks if values <strong data-start="1776" data-end="1783">and</strong> types are equal.</td>
+                        </tr>
+                        <tr data-start="1803" data-end="1913">
+                            <td><code data-start="1805" data-end="1809">!=</code></td>
+                            <td>Loose Inequality</td>
+                            <td>Checks if values are <strong data-start="1870" data-end="1877">not</strong> equal (converts types if needed).</td>
+                        </tr>
+                        <tr data-start="1914" data-end="2006">
+                            <td><code data-start="1916" data-end="1921">!==</code></td>
+                            <td>Strict Inequality</td>
+                            <td>Checks if values <strong data-start="1977" data-end="1983">or</strong> types are different.</td>
+                        </tr>
+                        <tr data-start="2007" data-end="2092">
+                            <td><code data-start="2009" data-end="2012">&gt;</code></td>
+                            <td>Greater Than</td>
+                            <td>Checks if left is greater than right.</td>
+                        </tr>
+                        <tr data-start="2093" data-end="2175">
+                            <td><code data-start="2095" data-end="2098">&lt;</code></td>
+                            <td>Less Than</td>
+                            <td>Checks if left is less than right.</td>
+                        </tr>
+                        <tr data-start="2176" data-end="2273">
+                            <td><code data-start="2178" data-end="2182">&gt;=</code></td>
+                            <td>Greater Than or Equal To</td>
+                            <td>Checks if left is greater than or equal to right.</td>
+                        </tr>
+                        <tr data-start="2274" data-end="2368">
+                            <td><code data-start="2276" data-end="2280">&lt;=</code></td>
+                            <td>Less Than or Equal To</td>
+                            <td>Checks if left is less than or equal to right.</td>
+                        </tr>
+                        <tr data-start="2369" data-end="2461">
+                            <td><code data-start="2371" data-end="2375">&amp;&amp;</code></td>
+                            <td>Logical AND</td>
+                            <td>Returns <code data-start="2423" data-end="2429">true</code> if <strong data-start="2433" data-end="2441">both</strong> sides are <code data-start="2452" data-end="2458">true</code>.</td>
+                        </tr>
+                        <tr data-start="2462" data-end="2560">
+                            <td>`</td>
+                            <td></td>
+                            <td>`</td>
+                        </tr>
+                        <tr data-start="2561" data-end="2651">
+                            <td><code data-start="2563" data-end="2566">!</code></td>
+                            <td>Logical NOT</td>
+                            <td>Reverses <code data-start="2616" data-end="2622">true</code> to <code data-start="2626" data-end="2633">false</code> and vice versa.</td>
+                        </tr>
+                        <tr data-start="2652" data-end="2755">
+                            <td><code data-start="2654" data-end="2658">??</code></td>
+                            <td>Nullish Coalescing</td>
+                            <td>Returns right operand if left is <code data-start="2731" data-end="2737">null</code> or <code data-start="2741" data-end="2752">undefined</code>.</td>
+                        </tr>
+                        <tr data-start="2756" data-end="2869">
+                            <td><code data-start="2758" data-end="2763">? :</code></td>
+                            <td>Ternary Operator</td>
+                            <td>Shortens <code data-start="2811" data-end="2820">if-else</code>: <code data-start="2822" data-end="2866">condition ? value_if_true : value_if_false</code>.</td>
+                        </tr>
+                        <tr data-start="2870" data-end="2948">
+                            <td><code data-start="2872" data-end="2875">&amp;</code></td>
+                            <td>Bitwise AND</td>
+                            <td>Performs AND on binary values.</td>
+                        </tr>
+                        <tr data-start="2949" data-end="3026">
+                            <td>`</td>
+                            <td>`</td>
+                            <td>Bitwise OR</td>
+                        </tr>
+                        <tr data-start="3027" data-end="3105">
+                            <td><code data-start="3029" data-end="3032">^</code></td>
+                            <td>Bitwise XOR</td>
+                            <td>Performs XOR on binary values.</td>
+                        </tr>
+                        <tr data-start="3106" data-end="3183">
+                            <td><code data-start="3108" data-end="3111">~</code></td>
+                            <td>Bitwise NOT</td>
+                            <td>Inverts all bits of a number.</td>
+                        </tr>
+                        <tr data-start="3184" data-end="3273">
+                            <td><code data-start="3186" data-end="3190">&lt;&lt;</code></td>
+                            <td>Bitwise Left Shift</td>
+                            <td>Shifts bits left, multiplying the number.</td>
+                        </tr>
+                        <tr data-start="3274" data-end="3361">
+                            <td><code data-start="3276" data-end="3280">&gt;&gt;</code></td>
+                            <td>Bitwise Right Shift</td>
+                            <td>Shifts bits right, dividing the number.</td>
+                        </tr>
+                        <tr data-start="3362" data-end="3448">
+                            <td><code data-start="3364" data-end="3369">&gt;&gt;&gt;</code></td>
+                            <td>Zero-Fill Right Shift</td>
+                            <td>Shifts bits right, filling with zeros.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+
+            </section>
+                
+        </main>
+
+        <footer>
+            <h1>HMU</h1>
+            <div>
+                <a href="https://www.youtube.com/@professormaximus9556"><img src="img/yt.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com/professor_maximusxo/"><img src="img/insta.png" alt="Insta"></a>
+                <a href="https://anthonymaximus.com"><img src="img/www.png" alt="Site"></a>
+            </div>
+        </footer>
+
+    </div>
+
+<script defer src="scripts/cheatsheet.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>

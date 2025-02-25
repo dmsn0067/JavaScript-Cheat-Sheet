@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html onload="page_load_function()">
+<head>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+
+            <div class="logocontainer">
+                <h1>Anthony Maximus</h1>
+                <h2>The Javascript Cheat Sheet</h2>
+            </div>
+
+            <nav>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="objects.html">Objects</a></li>
+                    <li><a href="methods.html">Methods</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                </ol>
+            </nav>
+
+        </header>
+
+        <main>
+            
+            <section>
+
+                <h1>Objects</h1>
+
+                <h2>These are things like how a document is a thing</h2>
+
+                <label for="magnify">Magnification On/Off</label>
+                <input type="checkbox" id="magnify" checked>
+
+                <br>
+                <br>
+
+                <table data-start="154" data-end="3297">
+                    <thead data-start="154" data-end="201">
+                        <tr data-start="154" data-end="201">
+                            <th data-start="154" data-end="163">Object</th>
+                            <th data-start="163" data-end="184">What It Represents</th>
+                            <th data-start="184" data-end="201">Example Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="249" data-end="3297">
+                        <tr data-start="249" data-end="308">
+                            <td><strong data-start="251" data-end="306">📌 Core Objects (Fundamental Objects in JavaScript)</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="309" data-end="422">
+                            <td><code data-start="311" data-end="319">Object</code></td>
+                            <td>A general-purpose object that can store key-value pairs</td>
+                            <td><code data-start="380" data-end="420">let user = { name: "Alice", age: 25 };</code></td>
+                        </tr>
+                        <tr data-start="423" data-end="530">
+                            <td><code data-start="425" data-end="432">Array</code></td>
+                            <td>A list-like object that holds multiple values</td>
+                            <td><code data-start="483" data-end="528">let fruits = ["apple", "banana", "cherry"];</code></td>
+                        </tr>
+                        <tr data-start="531" data-end="647">
+                            <td><code data-start="533" data-end="543">Function</code></td>
+                            <td>A function is a special object that can be executed</td>
+                            <td><code data-start="600" data-end="645">function greet() { console.log("Hello!"); }</code></td>
+                        </tr>
+                        <tr data-start="648" data-end="705">
+                            <td><strong data-start="650" data-end="703">📌 Browser Objects (Interacting with the Browser)</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="706" data-end="799">
+                            <td><code data-start="708" data-end="716">window</code></td>
+                            <td>Represents the entire browser window</td>
+                            <td><code data-start="758" data-end="777">window.innerWidth</code> (gets window width)</td>
+                        </tr>
+                        <tr data-start="800" data-end="882">
+                            <td><code data-start="802" data-end="812">document</code></td>
+                            <td>Represents the webpage (DOM)</td>
+                            <td><code data-start="846" data-end="862">document.title</code> (gets page title)</td>
+                        </tr>
+                        <tr data-start="883" data-end="986">
+                            <td><code data-start="885" data-end="896">navigator</code></td>
+                            <td>Contains information about the browser</td>
+                            <td><code data-start="940" data-end="961">navigator.userAgent</code> (gets browser details)</td>
+                        </tr>
+                        <tr data-start="987" data-end="1071">
+                            <td><code data-start="989" data-end="999">location</code></td>
+                            <td>Represents the URL of the page</td>
+                            <td><code data-start="1035" data-end="1050">location.href</code> (gets current URL)</td>
+                        </tr>
+                        <tr data-start="1072" data-end="1176">
+                            <td><code data-start="1074" data-end="1083">history</code></td>
+                            <td>Controls browser history (back/forward navigation)</td>
+                            <td><code data-start="1139" data-end="1155">history.back()</code> (goes back a page)</td>
+                        </tr>
+                        <tr data-start="1177" data-end="1267">
+                            <td><code data-start="1179" data-end="1188">console</code></td>
+                            <td>Allows debugging messages in the browser console</td>
+                            <td><code data-start="1242" data-end="1265">console.log("Hello");</code></td>
+                        </tr>
+                        <tr data-start="1268" data-end="1364">
+                            <td><code data-start="1270" data-end="1278">screen</code></td>
+                            <td>Provides information about the user's screen</td>
+                            <td><code data-start="1328" data-end="1342">screen.width</code> (gets screen width)</td>
+                        </tr>
+                        <tr data-start="1365" data-end="1414">
+                            <td><strong data-start="1367" data-end="1412">📌 DOM Objects (Manipulating the Webpage)</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="1415" data-end="1497">
+                            <td><code data-start="1417" data-end="1430">HTMLElement</code></td>
+                            <td>Represents any HTML element</td>
+                            <td><code data-start="1463" data-end="1495">document.getElementById("box")</code></td>
+                        </tr>
+                        <tr data-start="1498" data-end="1600">
+                            <td><code data-start="1500" data-end="1510">NodeList</code></td>
+                            <td>A list of DOM nodes (like an array, but read-only)</td>
+                            <td><code data-start="1566" data-end="1598">document.querySelectorAll("p")</code></td>
+                        </tr>
+                        <tr data-start="1601" data-end="1691">
+                            <td><code data-start="1603" data-end="1610">Event</code></td>
+                            <td>Represents an event (e.g., click, keypress)</td>
+                            <td><code data-start="1659" data-end="1671">event.type</code> (gets event type)</td>
+                        </tr>
+                        <tr data-start="1692" data-end="1778">
+                            <td><code data-start="1694" data-end="1705">classList</code></td>
+                            <td>Manages an element's CSS classes</td>
+                            <td><code data-start="1743" data-end="1776">element.classList.add("active")</code></td>
+                        </tr>
+                        <tr data-start="1779" data-end="1842">
+                            <td><strong data-start="1781" data-end="1840">📌 String, Number &amp; Boolean Objects (Working with Data)</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="1843" data-end="1913">
+                            <td><code data-start="1845" data-end="1853">String</code></td>
+                            <td>Represents text data</td>
+                            <td><code data-start="1879" data-end="1911">let str = "Hello"; str.length;</code></td>
+                        </tr>
+                        <tr data-start="1914" data-end="1988">
+                            <td><code data-start="1916" data-end="1924">Number</code></td>
+                            <td>Represents numeric values</td>
+                            <td><code data-start="1955" data-end="1986">let num = 42; num.toFixed(2);</code></td>
+                        </tr>
+                        <tr data-start="1989" data-end="2058">
+                            <td><code data-start="1991" data-end="2000">Boolean</code></td>
+                            <td>Represents true/false values</td>
+                            <td><code data-start="2034" data-end="2056">let isActive = true;</code></td>
+                        </tr>
+                        <tr data-start="2059" data-end="2149">
+                            <td><code data-start="2061" data-end="2067">Math</code></td>
+                            <td>Provides mathematical functions</td>
+                            <td><code data-start="2104" data-end="2119">Math.random()</code> (generates a random number)</td>
+                        </tr>
+                        <tr data-start="2150" data-end="2180">
+                            <td><strong data-start="2152" data-end="2178">📌 Date &amp; Time Objects</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="2181" data-end="2242">
+                            <td><code data-start="2183" data-end="2189">Date</code></td>
+                            <td>Represents date &amp; time</td>
+                            <td><code data-start="2217" data-end="2240">let now = new Date();</code></td>
+                        </tr>
+                        <tr data-start="2243" data-end="2274">
+                            <td><strong data-start="2245" data-end="2272">📌 Data Storage Objects</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="2275" data-end="2376">
+                            <td><code data-start="2277" data-end="2291">localStorage</code></td>
+                            <td>Stores data in the browser permanently</td>
+                            <td><code data-start="2335" data-end="2374">localStorage.setItem("key", "value");</code></td>
+                        </tr>
+                        <tr data-start="2377" data-end="2496">
+                            <td><code data-start="2379" data-end="2395">sessionStorage</code></td>
+                            <td>Stores data for the session (disappears when closed)</td>
+                            <td><code data-start="2453" data-end="2494">sessionStorage.setItem("key", "value");</code></td>
+                        </tr>
+                        <tr data-start="2497" data-end="2592">
+                            <td><code data-start="2499" data-end="2505">JSON</code></td>
+                            <td>Converts objects to and from JSON format</td>
+                            <td><code data-start="2551" data-end="2590">JSON.stringify(obj); JSON.parse(str);</code></td>
+                        </tr>
+                        <tr data-start="2593" data-end="2640">
+                            <td><strong data-start="2595" data-end="2638">📌 Special Objects (Advanced Use Cases)</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="2641" data-end="2753">
+                            <td><code data-start="2643" data-end="2651">RegExp</code></td>
+                            <td>Represents a regular expression for pattern matching</td>
+                            <td><code data-start="2709" data-end="2751">let regex = /abc/; regex.test("abcdef");</code></td>
+                        </tr>
+                        <tr data-start="2754" data-end="2883">
+                            <td><code data-start="2756" data-end="2765">Promise</code></td>
+                            <td>Represents an async operation that may complete in the future</td>
+                            <td><code data-start="2832" data-end="2881">fetch("url").then(response =&gt; response.json());</code></td>
+                        </tr>
+                        <tr data-start="2884" data-end="2968">
+                            <td><code data-start="2886" data-end="2891">Set</code></td>
+                            <td>Stores unique values (no duplicates)</td>
+                            <td><code data-start="2933" data-end="2966">let mySet = new Set([1,2,3,3]);</code></td>
+                        </tr>
+                        <tr data-start="2969" data-end="3079">
+                            <td><code data-start="2971" data-end="2976">Map</code></td>
+                            <td>Stores key-value pairs with any type of key</td>
+                            <td><code data-start="3025" data-end="3077">let myMap = new Map(); myMap.set("name", "Alice");</code></td>
+                        </tr>
+                        <tr data-start="3080" data-end="3185">
+                            <td><code data-start="3082" data-end="3091">WeakSet</code></td>
+                            <td>Like <code data-start="3099" data-end="3104">Set</code>, but holds weak references to objects</td>
+                            <td><code data-start="3145" data-end="3183">let ws = new WeakSet(); ws.add(obj);</code></td>
+                        </tr>
+                        <tr data-start="3186" data-end="3297">
+                            <td><code data-start="3188" data-end="3197">WeakMap</code></td>
+                            <td>Like <code data-start="3205" data-end="3210">Map</code>, but holds weak references to keys</td>
+                            <td><code data-start="3248" data-end="3295">let wm = new WeakMap(); wm.set(obj, "value");</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </main>
+
+        <footer>
+            
+        </footer>
+
+    </div>
+
+<script src="scripts/main.js"></script>
+</body>
+
+</html>

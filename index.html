@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Anthony Maximus - The JavaScript Cheat Sheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The JavaScript Cheat Sheet explanation of Javascript for beginers">
+<meta name="author" content="Anthony Maximus">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <a href="https://anthonymaximus.com">
+                <div class="logocontainer">
+                    <h1>Anthony Maximus</h1>
+                    <h2>The Javascript Cheat Sheet</h2>
+                </div>
+            </a>
+            
+            <nav>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="objects.html">Objects</a></li>
+                    <li><a href="methods.html">Methods</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                </ol>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <section>
+                <h1>Comments</h1>
+                <p>to make comments in JS use:</p>
+
+                <p>// Comment goes here</p>
+                <p>Usage: comment is one line only</p>
+
+                <p>or</p>
+
+                <p>/* commented out code goes here */</p>
+                <p>Usage: comment is multiple lines, encased within the /* */ </p>
+            </section>
+
+            <hr>
+
+            <section>
+                <h1>Variables</h1>
+                <h2>Variable Types</h2>
+
+                <p>
+
+                    var - Global Scope / Function Scope
+                    <br>
+                    Example:
+                    <br>
+                    var $name = 'Anthony Maximus';
+                    <br>
+                    <br>
+                    const - Constant Variable cannot be redeclared
+                    <br>
+                    Example:
+                    <br>
+                    const insta = 'https://www.instagram.com/professor_maximusxo';
+                    <br>
+                    <br>
+                    let - Can be redeclared / changed
+                    <br>
+                    Example:
+                    <br>
+                    let youtube = 'https://www.youtube.com/@professormaximus9556';
+                    <br>
+                    <br>
+
+                </p>
+
+                <h2>Differences</h2>
+
+                <label for="magnify">Magnification On/Off</label>
+                <input type="checkbox" id="magnify" checked>
+
+                <br>
+                <br>
+
+                <table data-start="2521" data-end="2841">
+                    <thead data-start="2521" data-end="2562">
+                        <tr data-start="2521" data-end="2562">
+                            <th data-start="2521" data-end="2532">Feature</th>
+                            <th data-start="2532" data-end="2541"><code data-start="2534" data-end="2539">var</code></th>
+                            <th data-start="2541" data-end="2550"><code data-start="2543" data-end="2548">let</code></th>
+                            <th data-start="2550" data-end="2562"><code data-start="2552" data-end="2559">const</code></th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="2604" data-end="2841">
+                        <tr data-start="2604" data-end="2661">
+                            <td>Scope</td>
+                            <td>Function-scoped</td>
+                            <td>Block-scoped</td>
+                            <td>Block-scoped</td>
+                        </tr>
+                        <tr data-start="2662" data-end="2701">
+                            <td>Reassignable</td>
+                            <td>✅ Yes</td>
+                            <td>✅ Yes</td>
+                            <td>❌ No</td>
+                        </tr>
+                        <tr data-start="2702" data-end="2740">
+                            <td>Redeclarable</td>
+                            <td>✅ Yes</td>
+                            <td>❌ No</td>
+                            <td>❌ No</td>
+                        </tr>
+                        <tr data-start="2741" data-end="2841">
+                            <td>Hoisted</td>
+                            <td>✅ Yes (initialized as <code data-start="2775" data-end="2786">undefined</code>)</td>
+                            <td>✅ Yes (not initialized)</td>
+                            <td>✅ Yes (not initialized)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2>You can store anything in a variable</h2>
+                <p>This box is stored in a variable</p>
+                <p>Look in cheatsheet.js this box's variable name is: boxvariable and the margin on it is generated via JS.</p>
+                <p>const boxvariable = document.getElementById('var-box');</p>
+                <div class="box" id="var-box">
+
+                </div>
+
+            </section>
+
+            <hr>
+
+            <section>
+                <h1>Output</h1>
+
+                <h2>When we store or take data, we may want to output that data. There are various ways to do so in JS.</h2>
+
+                <h2>Window Alert</h2>
+                <p>Displays an alert window</p>
+                <p>window.alert()</p>
+                <p>window.alert('Welcome to the JS Cheat Sheet!');</p>
+                <button id="alert_butt">🚨 Window Alerttt! 🚨</button>
+                <br>
+
+                <h2>Console Log</h2>
+                <p>Outputs data to the developer tools console</p>
+                <p>console.log()</p>
+                <p>console.log($name, insta, youtube, website);</p>
+                
+
+                <br>
+
+                <h2>InnerHTML</h2>
+                <p>Outputs structure and data to the HTML</p>
+                <p>.innerHTML</p>
+                <p>document.getElementById('id_name').InnerHTML = 'Content goes here';</p>
+
+                <div id="innerhtml_example">
+                    <!-- The output will be inserted in here using innerHTML -->
+                </div>
+
+                <br>
+
+                <h2>InnerText</h2>
+                <p>Outputs data to the HTML</p>
+                <p>.innerText</p>
+                <p>document.getElementById('id_name').InnerText = 'Content goes here';</p>
+
+                <p id="innertext_example"><!-- The output will be inserted in here using innerText --></p>
+
+                <br>
+
+                <h2>Document Write</h2>
+                <p>document.write();</p>
+                <p>Document Write will erase all the existing HTML and rewrite it with what you put in it</p>
+                <button onclick="document_write()">Document Write</button>
+
+                <br>
+                <br>
+
+                <h2>Document Print</h2>
+                <p>Print the page or save it as a PDF</p>
+                <p>onClick"window.print()"</p>
+                <button onclick="window.print()">Print Page</button>
+
+            </section>
+
+            <hr>
+
+            <section>
+                <h1>Methods</h1>
+                <h2>Methods are the ways in which we can do things</h2>
+
+                <p>We want to tartet an element in the HTML  and manipulate it right? We have to do this some how. A method is how!</p>
+
+                <p>.getElementByID - The method in this case in which we will pluck the element up is by way of its ID given to it in the HTML.</p>
+
+                <p>document.getElementById('someId1');<br>Here we target an element with the ID of 'someId1' but we didnt do anything to it.</p>
+                <div class="box" id="someId1">
+
+                </div>
+
+                <p>document.getElementById('someId2').style.backgroundColor = 'blue';<br>Here we targeted an element with the ID of 'someId2' and then changed the border on it.</p>
+                <div class="box" id="someId2">
+
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h1>Dom Manipulation</h1>
+                <h2>Editing styles of things using JS</h2>
+
+                <p>One of the many use cases of JS in front end design is manipulation of the DOM (Document Object Model) this can be dont in conjunction with a transition property placed on the element in the css to make the change happen over time.</p>
+
+                <h2>Box 1</h2>
+                <p>In the case of #box1 we just select it and change the background color. There is no transition and no event handler. Just plain ol static change here.</p>
+                <p>document.getElementById('box1').style.backgroundColor = 'red';</p>
+                <div class="box" id="box1">
+                   
+                </div>
+
+                <h2>Box 2</h2>
+                <p>In the case of #box2 there is a transition property on it in the CSS. So the change happens over time. But there is no event handler so it just runs the change on page load. Reload the page here to see it!</p>
+                <p>document.getElementById('box2').style.width = '97%';</p>
+                <div class="box" id="box2">
+                    
+                </div>
+
+            </section>
+
+            <hr>
+
+            <section>
+                <h1>Functions</h1>
+                <h2>How to make a function</h2>
+                <p>A function is a block of code that does something, it can be executed in various ways when different events happen, like when something is clicked on for example.</p>
+
+                <p>
+                    function function_name() {
+                    <br>
+                    &emsp;//code here
+                    <br>
+                    }
+                </p>
+
+                <h2>Functions and Scope</h2>
+
+                <p>Below is a function named run_math. There is a variable within it named x. Because the variable x is inside a function, you have to use it <i>inside</i> the function because it is scoped to it. If you tried to use the variable outside of the function it would return an error in the console.</p>
+                <p>
+                    function run_math() {
+                        <br>
+                        &emsp;let x = 1+1; //this is the variable
+                        <br>
+                        &emsp;document.querySelector('.math-box').innerText = x;
+                        <br>
+                    }
+                </p>
+
+                <p>When you click the button below it will put the sum of x in a div below it with a class if "math-box".</p>
+                <button onclick="run_math()">Click to run math</button>
+
+                <div class="math-box">
+
+                </div>
+
+            </section>
+
+            <hr>
+
+            <section>
+
+                <h1>Event Handling</h1>
+
+                <h2>Mouse Events</h2>
+
+                <h2>Box 3 - onclick event</h2>
+                <p>
+                    In this case the box will expand when it is clicked on.
+                    <br>
+                    <br>
+                    function box_click() {
+                        <br>
+                        &emsp;document.getElementById('box3').style.width = '97%';
+                        <br>
+                    }
+                    <br>
+                    <br>
+                    Note that #box3 does not have a transform property on it in the CSS so the change is immediate!
+                </p>
+                <div class="box" id="box3" onclick="box_click()">
+
+                </div>
+
+                <h2>Box 4 - ondblclick event</h2>
+                <p>
+                    In this case, this function will only happen when we actually interact with the targeted element, in this case dblclick.
+                    <br>
+                    <br>
+                    function box_double_click() {
+                        <br>
+                        &emsp;document.getElementById('box4').style.width = '97%';
+                        <br>
+                    }
+                    <br>
+                </p>
+                <div class="box" id="box4" ondblclick="box_double_click()">
+
+                </div>
+
+                <h2>Box 5 - onmouseover event</h2>
+                <p>
+                    In this case the event will happen when the mouse moves over the box.
+                    <br>
+                    <br>
+                    function box_mouseover() {
+                        <br>
+                        &emsp;document.getElementById('box5').style.width = '97%';
+                        <br>
+                        &emsp;document.getElementById('box5').style.backgroundColor = 'skyblue';
+                        <br>
+                    }
+                </p>
+                <div class="box" id="box5" onmouseover="box_mouseover()">
+
+                </div>
+
+                <h2>Box 6 - onmouseenter event & onmouseleave event</h2>
+                    <p>
+                        In this case the event will happen when the mouse enters the element and again when the mouse leaves the element.
+                        <br>
+                        <br>
+                        function box_mouseenter() {
+                            <br>
+                            &emsp;document.getElementById('box6').style.width = '97%';
+                            <br>
+                            &emsp;document.getElementById('box6').style.backgroundColor = 'skyblue';
+                            <br>
+                        }
+                        <br>
+                        <br>
+                        function box_return() {
+                            <br>
+                            &emsp;document.getElementById('box6').style.width = '200px';
+                            <br>
+                            &emsp;document.getElementById('box6').style.backgroundColor = '#fff';
+                            <br>
+                        }
+                    </p>
+                <div class="box" id="box6" onmouseenter="box_mouseenter()" onmouseleave="box_return()">
+
+                </div>
+
+                <h2>Box 7 - onmouseleave event</h2>
+                <p>
+                    In this case the event will trigger when the mouse leaves the element
+                    <br>
+                    <br>
+                    function box_mouseleave() {
+                        &emsp;document.getElementById('box7').style.width = '97%';
+                    }
+                </p>
+
+                <div class="box" id="box7" onmouseleave="box_mouseleave()">
+
+                </div>
+
+                <h2>Box 8 - onmousedown & onmouseup </h2>
+                <p>
+                    In this case the event is on mousedown (when the button is clicked).
+                    <br>
+                    <br>
+                    function box_mousedown() {
+                        <br>
+                        &emsp;document.getElementById('box8').style.transform = 'scale(2) rotate(300deg)';
+                        <br>
+                        &emsp;document.getElementById('box8').style.backgroundColor = 'red';
+                        <br>
+                    }
+                    <br>
+                    <br>
+                    function box_mouseup() {
+                        <br>
+                        &emsp;document.getElementById('box8').style.transform = 'scale(1) rotate(0deg)';
+                        <br>
+                        &emsp;document.getElementById('box8').style.backgroundColor = '#fff';
+                        <br>
+                    }
+                </p>
+                <div class="box" id="box8" onmousedown="box_mousedown()" onmouseup="box_mouseup()">
+
+                </div>
+               
+                <h2>Key Events</h2>
+
+                <h2>Box 9 - onkeydown event</h2>
+                <p>
+                    In this case the event will trigger when the user pushes a keyboard key we will also insert the element into a variable. Lets walk through it...
+                    <br>
+                    <br>
+                    Below we will insert the html element with the id of 'keydownexample' into a variable, it will be easier to work with that way.
+                    <br>
+                    <br>
+                    let key_down_example = document.getElementById('keydownexample');
+                    <br>
+                    <br>
+                    key_down_example.addEventListener('keydown', ()=> {
+                        <br>
+                        &emsp;key_down_example.style.backgroundColor = 'skyblue';
+                        <br>
+                        &emsp;key_down_example.style.transform = 'scale(2) translate(35px, 0px)';
+                        <br>
+                    });
+                    <br>
+                    <br>
+                    Compare the example we just looked at to the ones above. See the difference? Putting the element in a variable makes it easier to work with.
+                    <br>
+                    No need to type document.getElementById('keydownexample') over and over!
+                </p>
+                <p>Key Down event will trigger when the user presses a key on the keyboard.</p>
+
+                <input type="text" id="keydownexample">
+
+                <h2>Box 10 - More efficient event handling</h2>
+                <p>The better way of dealing with event handling is to use addEventListener, we can also do more advanced things like:</p>
+                <li>Creating a Variable</li>
+                <li>Insert an element into the Variable</li>
+                <li>Add an addEventListener</li>
+                <li>Do something to the element</li>
+                <p>Below if you click 1 time it will turn red, click 2 times it will turn white.</p>
+
+                <p>
+                    //Insert the element into a variable
+                    <br>
+                    const box10 = document.getElementById('box10');
+                    <br>
+                    //Add the event listener when it is clicked and run the function within
+                    <br>
+                    box10.addEventListener('click', function() {
+                        <br>
+                        &emsp;//Style the element
+                        <br>
+                        &emsp;box10.style.backgroundColor = 'red';
+                        <br>
+                    });
+                    <br>
+                    <br>
+                    //It could also look like this, using an *arrow function* '()=>' this is the superior method.
+                    <br>
+                    box10.addEventListener('dblclick', ()=> {
+                        <br>
+                        &emsp;box10.style.backgroundColor = "#fff";
+                        <br>
+                    });
+                    <br>
+                    <br>
+                    As you can see, the above example is much more efficient and faster to code. This same principle exists in many ways. Basically any time you need to handle events, it is better to use an event listener.
+                </p>
+                
+                <div class="box" id="box10">
+
+                </div>
+
+            </section>
+                
+        </main>
+
+        <footer>
+            <h1>HMU</h1>
+            <div>
+                <a href="https://www.youtube.com/@professormaximus9556"><img src="img/yt.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com/professor_maximusxo/"><img src="img/insta.png" alt="Insta"></a>
+                <a href="https://anthonymaximus.com"><img src="img/www.png" alt="Site"></a>
+            </div>
+        </footer>
+
+    </div>
+
+<script defer src="scripts/cheatsheet.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>

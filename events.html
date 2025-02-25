@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Anthony Maximus - The JavaScript Cheat Sheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The JavaScript Cheat Sheet explanation of Javascript for beginers">
+<meta name="author" content="Anthony Maximus">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+
+            <div class="logocontainer">
+                <h1>Anthony Maximus</h1>
+                <h2>The Javascript Cheat Sheet</h2>
+            </div>
+        
+            <nav>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="objects.html">Objects</a></li>
+                    <li><a href="methods.html">Methods</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                </ol>
+            </nav>
+
+        </header>   
+
+        <main>
+
+            <section>
+
+                <h1>Events</h1>
+
+                <h2>Events that happen when the user does stuff like mouse over an element</h2>
+
+                <label for="magnify">Magnification On/Off</label>
+                <input type="checkbox" id="magnify" checked>
+
+                <br>
+                <br>
+
+                <table data-start="152" data-end="1778">
+                    <thead data-start="152" data-end="195">
+                        <tr data-start="152" data-end="195">
+                            <th data-start="152" data-end="171"><strong data-start="154" data-end="163">Event</strong></th>
+                            <th data-start="171" data-end="195"><strong data-start="173" data-end="193">Triggers When...</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="239" data-end="1778">
+                        <tr data-start="239" data-end="283">
+                            <td><code data-start="241" data-end="248">click</code></td>
+                            <td>An element is clicked.</td>
+                        </tr>
+                        <tr data-start="284" data-end="335">
+                            <td><code data-start="286" data-end="296">dblclick</code></td>
+                            <td>An element is double-clicked.</td>
+                        </tr>
+                        <tr data-start="336" data-end="382">
+                            <td><code data-start="338" data-end="349">mouseover</code></td>
+                            <td>Mouse enters an element.</td>
+                        </tr>
+                        <tr data-start="383" data-end="429">
+                            <td><code data-start="385" data-end="395">mouseout</code></td>
+                            <td>Mouse leaves an element.</td>
+                        </tr>
+                        <tr data-start="430" data-end="513">
+                            <td><code data-start="432" data-end="444">mouseenter</code></td>
+                            <td>Mouse enters an element (doesn’t bubble up like <code data-start="498" data-end="509">mouseover</code>).</td>
+                        </tr>
+                        <tr data-start="514" data-end="596">
+                            <td><code data-start="516" data-end="528">mouseleave</code></td>
+                            <td>Mouse leaves an element (doesn’t bubble up like <code data-start="582" data-end="592">mouseout</code>).</td>
+                        </tr>
+                        <tr data-start="597" data-end="649">
+                            <td><code data-start="599" data-end="610">mousemove</code></td>
+                            <td>Mouse moves inside an element.</td>
+                        </tr>
+                        <tr data-start="650" data-end="701">
+                            <td><code data-start="652" data-end="663">mousedown</code></td>
+                            <td>Mouse button is pressed down.</td>
+                        </tr>
+                        <tr data-start="702" data-end="749">
+                            <td><code data-start="704" data-end="713">mouseup</code></td>
+                            <td>Mouse button is released.</td>
+                        </tr>
+                        <tr data-start="750" data-end="791">
+                            <td><code data-start="752" data-end="761">keydown</code></td>
+                            <td>Any key is pressed.</td>
+                        </tr>
+                        <tr data-start="792" data-end="832">
+                            <td><code data-start="794" data-end="801">keyup</code></td>
+                            <td>A key is released.</td>
+                        </tr>
+                        <tr data-start="833" data-end="930">
+                            <td><code data-start="835" data-end="845">keypress</code>*</td>
+                            <td>A key is pressed down and produces a character (deprecated, use <code data-start="917" data-end="926">keydown</code>).</td>
+                        </tr>
+                        <tr data-start="931" data-end="998">
+                            <td><code data-start="933" data-end="940">focus</code></td>
+                            <td>An element (like an input field) gains focus.</td>
+                        </tr>
+                        <tr data-start="999" data-end="1044">
+                            <td><code data-start="1001" data-end="1007">blur</code></td>
+                            <td>An element loses focus.</td>
+                        </tr>
+                        <tr data-start="1045" data-end="1130">
+                            <td><code data-start="1047" data-end="1055">change</code></td>
+                            <td>The value of an <code data-start="1081" data-end="1090">&lt;input&gt;</code>, <code data-start="1092" data-end="1102">&lt;select&gt;</code>, or <code data-start="1107" data-end="1119">&lt;textarea&gt;</code> changes.</td>
+                        </tr>
+                        <tr data-start="1131" data-end="1217">
+                            <td><code data-start="1133" data-end="1140">input</code></td>
+                            <td>An input field value changes (fires instantly, unlike <code data-start="1205" data-end="1213">change</code>).</td>
+                        </tr>
+                        <tr data-start="1218" data-end="1260">
+                            <td><code data-start="1220" data-end="1228">submit</code></td>
+                            <td>A form is submitted.</td>
+                        </tr>
+                        <tr data-start="1261" data-end="1299">
+                            <td><code data-start="1263" data-end="1270">reset</code></td>
+                            <td>A form is reset.</td>
+                        </tr>
+                        <tr data-start="1300" data-end="1357">
+                            <td><code data-start="1302" data-end="1310">scroll</code></td>
+                            <td>The page or an element is scrolled.</td>
+                        </tr>
+                        <tr data-start="1358" data-end="1402">
+                            <td><code data-start="1360" data-end="1368">resize</code></td>
+                            <td>The window is resized.</td>
+                        </tr>
+                        <tr data-start="1403" data-end="1481">
+                            <td><code data-start="1405" data-end="1411">load</code></td>
+                            <td>The page or an element (like an image) finishes loading.</td>
+                        </tr>
+                        <tr data-start="1482" data-end="1535">
+                            <td><code data-start="1484" data-end="1492">unload</code></td>
+                            <td>The page is about to be closed.</td>
+                        </tr>
+                        <tr data-start="1536" data-end="1593">
+                            <td><code data-start="1538" data-end="1551">contextmenu</code></td>
+                            <td>Right-click context menu is opened.</td>
+                        </tr>
+                        <tr data-start="1594" data-end="1657">
+                            <td><code data-start="1596" data-end="1607">dragstart</code></td>
+                            <td>A draggable element starts being dragged.</td>
+                        </tr>
+                        <tr data-start="1658" data-end="1726">
+                            <td><code data-start="1660" data-end="1670">dragover</code></td>
+                            <td>A dragged element is over a valid drop target.</td>
+                        </tr>
+                        <tr data-start="1727" data-end="1778">
+                            <td><code data-start="1729" data-end="1735">drop</code></td>
+                            <td>A dragged element is dropped.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="socials">
+                
+            </div>
+        </footer>
+
+    </div>
+
+<script src="scripts/cheatsheet.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<htm>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The JavaScript Cheat Sheet explanation of Javascript for beginers">
+<meta name="author" content="Anthony Maximus">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+       
+        <header>
+
+            <div class="logocontainer">
+                <h1>Anthony Maximus</h1>
+                <h2>The Javascript Cheat Sheet</h2>
+            </div>
+
+            <nav>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="objects.html">Objects</a></li>
+                    <li><a href="methods.html">Methods</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="operators.html">Operators</a></li>
+                </ol>
+            </nav>
+
+        </header>
+
+        <main>
+            
+            <section>
+
+                <h1>Methods</h1>
+
+                <h2>The methods in ways we do stuff</h2>
+
+                <label for="magnify">Magnification On/Off</label>
+                <input type="checkbox" id="magnify" checked>
+
+                <br>
+                <br>
+
+                <table data-start="184" data-end="4804">
+                    <thead data-start="184" data-end="232">
+                        <tr data-start="184" data-end="232">
+                            <th data-start="184" data-end="193">Method</th>
+                            <th data-start="193" data-end="206">Belongs To</th>
+                            <th data-start="206" data-end="221">What It Does</th>
+                            <th data-start="221" data-end="232">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody data-start="280" data-end="4804">
+                        <tr data-start="280" data-end="327">
+                            <td><strong data-start="282" data-end="325">📌 DOM Methods <br> (Manipulating Web Pages)</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="328" data-end="432">
+                            <td><code data-start="330" data-end="351">.getElementById(id)</code></td>
+                            <td><code data-start="354" data-end="364">document</code></td>
+                            <td>Selects an element by its ID</td>
+                            <td><code data-start="398" data-end="430">document.getElementById("box")</code></td>
+                        </tr>
+                        <tr data-start="433" data-end="554">
+                            <td><code data-start="435" data-end="461">.querySelector(selector)</code></td>
+                            <td><code data-start="464" data-end="474">document</code></td>
+                            <td>Selects the <strong data-start="489" data-end="498">first</strong> matching element</td>
+                            <td><code data-start="518" data-end="552">document.querySelector(".class")</code></td>
+                        </tr>
+                        <tr data-start="555" data-end="695">
+                            <td><code data-start="557" data-end="586">.querySelectorAll(selector)</code></td>
+                            <td><code data-start="589" data-end="599">document</code></td>
+                            <td>Selects <strong data-start="610" data-end="617">all</strong> matching elements (returns a NodeList)</td>
+                            <td><code data-start="659" data-end="693">document.querySelectorAll("div")</code></td>
+                        </tr>
+                        <tr data-start="696" data-end="795">
+                            <td><code data-start="698" data-end="719">.createElement(tag)</code></td>
+                            <td><code data-start="722" data-end="732">document</code></td>
+                            <td>Creates a new HTML element</td>
+                            <td><code data-start="764" data-end="793">document.createElement("p")</code></td>
+                        </tr>
+                        <tr data-start="796" data-end="912">
+                            <td><code data-start="798" data-end="821">.appendChild(element)</code></td>
+                            <td><code data-start="824" data-end="839">parentElement</code></td>
+                            <td>Adds an element inside another</td>
+                            <td><code data-start="875" data-end="910">document.body.appendChild(newDiv)</code></td>
+                        </tr>
+                        <tr data-start="913" data-end="1019">
+                            <td><code data-start="915" data-end="926">.remove()</code></td>
+                            <td><code data-start="929" data-end="938">element</code></td>
+                            <td>Removes an element from the page</td>
+                            <td><code data-start="976" data-end="1017">document.getElementById("box").remove()</code></td>
+                        </tr>
+                        <tr data-start="1020" data-end="1161">
+                            <td><code data-start="1022" data-end="1058">.addEventListener(event, function)</code></td>
+                            <td><code data-start="1061" data-end="1070">element</code></td>
+                            <td>Listens for an event (click, hover, etc.)</td>
+                            <td><code data-start="1117" data-end="1159">button.addEventListener("click", myFunc)</code></td>
+                        </tr>
+                        <tr data-start="1162" data-end="1274">
+                            <td><code data-start="1164" data-end="1192">.setAttribute(name, value)</code></td>
+                            <td><code data-start="1195" data-end="1204">element</code></td>
+                            <td>Sets an attribute on an element</td>
+                            <td><code data-start="1241" data-end="1272">div.setAttribute("id", "box")</code></td>
+                        </tr>
+                        <tr data-start="1275" data-end="1372">
+                            <td><code data-start="1277" data-end="1298">.getAttribute(name)</code></td>
+                            <td><code data-start="1301" data-end="1310">element</code></td>
+                            <td>Gets the value of an attribute</td>
+                            <td><code data-start="1346" data-end="1370">div.getAttribute("id")</code></td>
+                        </tr>
+                        <tr data-start="1373" data-end="1477">
+                            <td><code data-start="1375" data-end="1398">.classList.add(class)</code></td>
+                            <td><code data-start="1401" data-end="1410">element</code></td>
+                            <td>Adds a CSS class to an element</td>
+                            <td><code data-start="1446" data-end="1475">div.classList.add("active")</code></td>
+                        </tr>
+                        <tr data-start="1478" data-end="1577">
+                            <td><code data-start="1480" data-end="1506">.classList.remove(class)</code></td>
+                            <td><code data-start="1509" data-end="1518">element</code></td>
+                            <td>Removes a CSS class</td>
+                            <td><code data-start="1543" data-end="1575">div.classList.remove("active")</code></td>
+                        </tr>
+                        <tr data-start="1578" data-end="1715">
+                            <td><code data-start="1580" data-end="1606">.classList.toggle(class)</code></td>
+                            <td><code data-start="1609" data-end="1618">element</code></td>
+                            <td>Toggles a CSS class (adds if missing, removes if present)</td>
+                            <td><code data-start="1681" data-end="1713">div.classList.toggle("hidden")</code></td>
+                        </tr>
+                        <tr data-start="1716" data-end="1776">
+                            <td><strong data-start="1718" data-end="1774">📌 Window Methods <br> (Handling Browser Window &amp; Events)</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="1777" data-end="1851">
+                            <td><code data-start="1779" data-end="1796">.alert(message)</code></td>
+                            <td><code data-start="1799" data-end="1807">window</code></td>
+                            <td>Shows a popup alert</td>
+                            <td><code data-start="1832" data-end="1849">alert("Hello!")</code></td>
+                        </tr>
+                        <tr data-start="1852" data-end="1938">
+                            <td><code data-start="1854" data-end="1873">.confirm(message)</code></td>
+                            <td><code data-start="1876" data-end="1884">window</code></td>
+                            <td>Shows a yes/no popup</td>
+                            <td><code data-start="1910" data-end="1936">confirm("Are you sure?")</code></td>
+                        </tr>
+                        <tr data-start="1939" data-end="2039">
+                            <td><code data-start="1941" data-end="1959">.prompt(message)</code></td>
+                            <td><code data-start="1962" data-end="1970">window</code></td>
+                            <td>Shows a popup with an input field</td>
+                            <td><code data-start="2009" data-end="2037">prompt("Enter your name:")</code></td>
+                        </tr>
+                        <tr data-start="2040" data-end="2150">
+                            <td><code data-start="2042" data-end="2065">.setTimeout(func, ms)</code></td>
+                            <td><code data-start="2068" data-end="2076">window</code></td>
+                            <td>Runs a function after a delay</td>
+                            <td><code data-start="2111" data-end="2148">setTimeout(() =&gt; alert("Hi"), 2000)</code></td>
+                        </tr>
+                        <tr data-start="2151" data-end="2281">
+                            <td><code data-start="2153" data-end="2177">.setInterval(func, ms)</code></td>
+                            <td><code data-start="2180" data-end="2188">window</code></td>
+                            <td>Runs a function repeatedly at intervals</td>
+                            <td><code data-start="2233" data-end="2279">setInterval(() =&gt; console.log("Tick"), 1000)</code></td>
+                        </tr>
+                        <tr data-start="2282" data-end="2375">
+                            <td><code data-start="2284" data-end="2301">.scrollTo(x, y)</code></td>
+                            <td><code data-start="2304" data-end="2312">window</code></td>
+                            <td>Scrolls the page to a position</td>
+                            <td><code data-start="2348" data-end="2373">window.scrollTo(0, 500)</code></td>
+                        </tr>
+                        <tr data-start="2376" data-end="2421">
+                            <td><strong data-start="2378" data-end="2419">📌 String Methods <br> (Working with Text)</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="2422" data-end="2520">
+                            <td><code data-start="2424" data-end="2440">.toUpperCase()</code></td>
+                            <td><code data-start="2443" data-end="2451">string</code></td>
+                            <td>Converts text to uppercase</td>
+                            <td><code data-start="2483" data-end="2506">"hello".toUpperCase()</code> → <code data-start="2509" data-end="2518">"HELLO"</code></td>
+                        </tr>
+                        <tr data-start="2521" data-end="2619">
+                            <td><code data-start="2523" data-end="2539">.toLowerCase()</code></td>
+                            <td><code data-start="2542" data-end="2550">string</code></td>
+                            <td>Converts text to lowercase</td>
+                            <td><code data-start="2582" data-end="2605">"HELLO".toLowerCase()</code> → <code data-start="2608" data-end="2617">"hello"</code></td>
+                        </tr>
+                        <tr data-start="2620" data-end="2715">
+                            <td><code data-start="2622" data-end="2631">.trim()</code></td>
+                            <td><code data-start="2634" data-end="2642">string</code></td>
+                            <td>Removes spaces from start and end</td>
+                            <td><code data-start="2681" data-end="2701">" hello ".trim()</code> → <code data-start="2704" data-end="2713">"hello"</code></td>
+                        </tr>
+                        <tr data-start="2716" data-end="2827">
+                            <td><code data-start="2718" data-end="2740">.includes(substring)</code></td>
+                            <td><code data-start="2743" data-end="2751">string</code></td>
+                            <td>Checks if a string contains a value</td>
+                            <td><code data-start="2792" data-end="2816">"hello".includes("he")</code> → <code data-start="2819" data-end="2825">true</code></td>
+                        </tr>
+                        <tr data-start="2828" data-end="2933">
+                            <td><code data-start="2830" data-end="2850">.replace(old, new)</code></td>
+                            <td><code data-start="2853" data-end="2861">string</code></td>
+                            <td>Replaces part of a string</td>
+                            <td><code data-start="2892" data-end="2919">"hello".replace("h", "j")</code> → <code data-start="2922" data-end="2931">"jello"</code></td>
+                        </tr>
+                        <tr data-start="2934" data-end="3030">
+                            <td><code data-start="2936" data-end="2956">.slice(start, end)</code></td>
+                            <td><code data-start="2959" data-end="2967">string</code></td>
+                            <td>Extracts part of a string</td>
+                            <td><code data-start="2998" data-end="3019">"hello".slice(0, 2)</code> → <code data-start="3022" data-end="3028">"he"</code></td>
+                        </tr>
+                        <tr data-start="3031" data-end="3080">
+                            <td><strong data-start="3033" data-end="3078">📌 Array Methods <br> (Handling Lists of Data)</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="3081" data-end="3168">
+                            <td><code data-start="3083" data-end="3096">.push(item)</code></td>
+                            <td><code data-start="3099" data-end="3106">array</code></td>
+                            <td>Adds an item to the end</td>
+                            <td><code data-start="3135" data-end="3152">[1,2,3].push(4)</code> → <code data-start="3155" data-end="3166">[1,2,3,4]</code></td>
+                        </tr>
+                        <tr data-start="3169" data-end="3243">
+                            <td><code data-start="3171" data-end="3179">.pop()</code></td>
+                            <td><code data-start="3182" data-end="3189">array</code></td>
+                            <td>Removes the last item</td>
+                            <td><code data-start="3216" data-end="3231">[1,2,3].pop()</code> → <code data-start="3234" data-end="3241">[1,2]</code></td>
+                        </tr>
+                        <tr data-start="3244" data-end="3323">
+                            <td><code data-start="3246" data-end="3256">.shift()</code></td>
+                            <td><code data-start="3259" data-end="3266">array</code></td>
+                            <td>Removes the first item</td>
+                            <td><code data-start="3294" data-end="3311">[1,2,3].shift()</code> → <code data-start="3314" data-end="3321">[2,3]</code></td>
+                        </tr>
+                        <tr data-start="3324" data-end="3419">
+                            <td><code data-start="3326" data-end="3342">.unshift(item)</code></td>
+                            <td><code data-start="3345" data-end="3352">array</code></td>
+                            <td>Adds an item to the start</td>
+                            <td><code data-start="3383" data-end="3403">[1,2,3].unshift(0)</code> → <code data-start="3406" data-end="3417">[0,1,2,3]</code></td>
+                        </tr>
+                        <tr data-start="3420" data-end="3523">
+                            <td><code data-start="3422" data-end="3452">.splice(index, count, item?)</code></td>
+                            <td><code data-start="3455" data-end="3462">array</code></td>
+                            <td>Removes or adds items</td>
+                            <td><code data-start="3489" data-end="3511">[1,2,3].splice(1, 1)</code> → <code data-start="3514" data-end="3521">[1,3]</code></td>
+                        </tr>
+                        <tr data-start="3524" data-end="3620">
+                            <td><code data-start="3526" data-end="3546">.slice(start, end)</code></td>
+                            <td><code data-start="3549" data-end="3556">array</code></td>
+                            <td>Extracts part of an array</td>
+                            <td><code data-start="3587" data-end="3608">[1,2,3].slice(0, 2)</code> → <code data-start="3611" data-end="3618">[1,2]</code></td>
+                        </tr>
+                        <tr data-start="3621" data-end="3719">
+                            <td><code data-start="3623" data-end="3639">.indexOf(item)</code></td>
+                            <td><code data-start="3642" data-end="3649">array</code></td>
+                            <td>Finds the index of an item</td>
+                            <td><code data-start="3681" data-end="3711">["a", "b", "c"].indexOf("b")</code> → <code data-start="3714" data-end="3717">1</code></td>
+                        </tr>
+                        <tr data-start="3720" data-end="3811">
+                            <td><code data-start="3722" data-end="3739">.includes(item)</code></td>
+                            <td><code data-start="3742" data-end="3749">array</code></td>
+                            <td>Checks if an item exists</td>
+                            <td><code data-start="3779" data-end="3800">[1,2,3].includes(2)</code> → <code data-start="3803" data-end="3809">true</code></td>
+                        </tr>
+                        <tr data-start="3812" data-end="3909">
+                            <td><code data-start="3814" data-end="3830">.forEach(func)</code></td>
+                            <td><code data-start="3833" data-end="3840">array</code></td>
+                            <td>Loops through items</td>
+                            <td><code data-start="3865" data-end="3907">[1,2,3].forEach(num =&gt; console.log(num))</code></td>
+                        </tr>
+                        <tr data-start="3910" data-end="4021">
+                            <td><code data-start="3912" data-end="3924">.map(func)</code></td>
+                            <td><code data-start="3927" data-end="3934">array</code></td>
+                            <td>Creates a new array by modifying each item</td>
+                            <td><code data-start="3982" data-end="4007">[1,2,3].map(x =&gt; x * 2)</code> → <code data-start="4010" data-end="4019">[2,4,6]</code></td>
+                        </tr>
+                        <tr data-start="4022" data-end="4139">
+                            <td><code data-start="4024" data-end="4039">.filter(func)</code></td>
+                            <td><code data-start="4042" data-end="4049">array</code></td>
+                            <td>Creates a new array with only matching items</td>
+                            <td><code data-start="4099" data-end="4127">[1,2,3].filter(x =&gt; x &gt; 1)</code> → <code data-start="4130" data-end="4137">[2,3]</code></td>
+                        </tr>
+                        <tr data-start="4140" data-end="4262">
+                            <td><code data-start="4142" data-end="4164">.reduce(func, start)</code></td>
+                            <td><code data-start="4167" data-end="4174">array</code></td>
+                            <td>Reduces an array to a single value</td>
+                            <td><code data-start="4214" data-end="4254">[1,2,3].reduce((sum, x) =&gt; sum + x, 0)</code> → <code data-start="4257" data-end="4260">6</code></td>
+                        </tr>
+                        <tr data-start="4263" data-end="4312">
+                            <td><strong data-start="4265" data-end="4310">📌 Math Methods <br> (Performing Calculations)</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr data-start="4313" data-end="4394">
+                            <td><code data-start="4315" data-end="4330">Math.random()</code></td>
+                            <td><code data-start="4333" data-end="4339">Math</code></td>
+                            <td>Returns a random number (0 to 1)</td>
+                            <td><code data-start="4377" data-end="4392">Math.random()</code></td>
+                        </tr>
+                        <tr data-start="4395" data-end="4465">
+                            <td><code data-start="4397" data-end="4414">Math.floor(num)</code></td>
+                            <td><code data-start="4417" data-end="4423">Math</code></td>
+                            <td>Rounds down</td>
+                            <td><code data-start="4440" data-end="4457">Math.floor(4.7)</code> → <code data-start="4460" data-end="4463">4</code></td>
+                        </tr>
+                        <tr data-start="4466" data-end="4532">
+                            <td><code data-start="4468" data-end="4484">Math.ceil(num)</code></td>
+                            <td><code data-start="4487" data-end="4493">Math</code></td>
+                            <td>Rounds up</td>
+                            <td><code data-start="4508" data-end="4524">Math.ceil(4.1)</code> → <code data-start="4527" data-end="4530">5</code></td>
+                        </tr>
+                        <tr data-start="4533" data-end="4619">
+                            <td><code data-start="4535" data-end="4552">Math.round(num)</code></td>
+                            <td><code data-start="4555" data-end="4561">Math</code></td>
+                            <td>Rounds to the nearest whole</td>
+                            <td><code data-start="4594" data-end="4611">Math.round(4.5)</code> → <code data-start="4614" data-end="4617">5</code></td>
+                        </tr>
+                        <tr data-start="4620" data-end="4711">
+                            <td><code data-start="4622" data-end="4643">Math.max(a, b, ...)</code></td>
+                            <td><code data-start="4646" data-end="4652">Math</code></td>
+                            <td>Returns the largest number</td>
+                            <td><code data-start="4684" data-end="4703">Math.max(1, 5, 3)</code> → <code data-start="4706" data-end="4709">5</code></td>
+                        </tr>
+                        <tr data-start="4712" data-end="4804">
+                            <td><code data-start="4714" data-end="4735">Math.min(a, b, ...)</code></td>
+                            <td><code data-start="4738" data-end="4744">Math</code></td>
+                            <td>Returns the smallest number</td>
+                            <td><code data-start="4777" data-end="4796">Math.min(1, 5, 3)</code> → <code data-start="4799" data-end="4802">1</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </main>
+
+        <footer>
+            
+        </footer>
+
+    </div>
+
+<script src="scripts/main.js"></script>
+</body>
+
+</html>
