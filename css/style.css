@@ -262,14 +262,29 @@ footer img:hover {
         transform: translate(50px, 50px);
     }
 
+    nav {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
     nav ol {
         display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         margin: 0;
+        padding: 0;
+    }
+
+    nav ol li a {
+        font-size: 0.6em;
     }
 
     main {
         width: 95%;
+    }
+
+    [for="magnify"],
+    #magnify {
+        display: none;
     }
 
     main,
@@ -279,6 +294,21 @@ footer img:hover {
 
     section {
         width: 100%;
+        overflow-x: scroll;
+    }
+
+    table {
+        width: 100%;
+        overflow-x: scroll;
+        font-size: .7em;
+    }
+
+    .magnifyTr:hover {
+        transform: scale(1);
+    }
+
+    .magnifyTr:hover > td {
+        padding: 2px;
     }
 
     footer {
